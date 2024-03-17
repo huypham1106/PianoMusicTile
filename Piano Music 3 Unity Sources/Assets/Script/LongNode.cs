@@ -13,6 +13,9 @@ public class LongNode : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     [SerializeField] private Image imgLongNode;
     [SerializeField] private float speedScroll;
     [SerializeField] private float speedFall;
+    [SerializeField] private GameObject pointA;
+    [SerializeField] private GameObject pointB;
+    [SerializeField] private GameObject vfxSpiky;
 
     private Coroutine crScrollMask;
 
@@ -34,6 +37,7 @@ public class LongNode : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         isDragging = false;
         maskNode.transform.localScale = new Vector3(1f, 0f, 1f);
         errorMaskNode.SetActive(false);
+        vfxSpiky.SetActive(false);
         StopAllCoroutines();
     }
     public void InitData(int id,bool isRealNode, float speedFall, float speedScroll)
@@ -72,6 +76,7 @@ public class LongNode : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             {
                 Debug.LogError("co vo day");
                 isDragging = true;
+                vfxSpiky.SetActive(true);
 
                 if (crScrollMask != null) StopCoroutine(crScrollMask);
                 crScrollMask = StartCoroutine(ScrollMask());
@@ -99,7 +104,8 @@ public class LongNode : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 break;
             }
             maskNode.transform.localScale +=   new Vector3(0f, speedScroll, 0f);
-            yield return null;
+            vfxSpiky.transform.localPosition =  Vector3.Lerp(pointA.transform.localPosition, pointB.transform.localPosition, maskNode.transform.localScale.y);
+           yield return null;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

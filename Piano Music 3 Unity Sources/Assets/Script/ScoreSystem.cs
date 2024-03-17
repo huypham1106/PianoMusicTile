@@ -32,11 +32,11 @@ public class ScoreSystem : Singleton<ScoreSystem>
     {
         PointData pointData = new PointData();
         var p = 1;
-        if(offSetTime < 0.2f)
+        if(offSetTime < 0.4f)
         {
             p = 3;
         } else    
-        if(offSetTime < 0.4f)
+        if(offSetTime < 0.6f)
         {
             p = 2;
         }

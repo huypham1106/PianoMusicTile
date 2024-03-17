@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Hawki;
 using System.Linq;
+using DG.Tweening;
 
 public class NodeModel
 {
@@ -88,7 +89,7 @@ public class GamePlayController : MonoSingleton<GamePlayController>, IRegister
     {
         SoundManager.I.StopMusic();
         yield return new WaitForSeconds(0.8f);      
-        SoundManager.I.PlayMusic(Global.SoundName.londonbridgeisfallingdown, false);
+        SoundManager.I.PlayMusic(Global.SoundName.abc, false);
         if(crCoundownTimeMusic != null)
         {
             StopCoroutine(crCoundownTimeMusic);
@@ -99,7 +100,7 @@ public class GamePlayController : MonoSingleton<GamePlayController>, IRegister
     private void loadMap()
     {
 
-        int currentLevel = 2;
+        int currentLevel = 1;
         MapSO map = Utilities.LoadMapSO(currentLevel);
         if (map != null) mapData = map;
     }
@@ -210,6 +211,8 @@ public class GamePlayController : MonoSingleton<GamePlayController>, IRegister
             float offSetTimeBetweenNode = dictNode[index].time - index == 0 ? lastTimeClickNode : dictNode[lastNodeId].time;
             var pointData = ScoreSystem.Instance.CaculatePoint(index == 0 ? 0: Mathf.Abs(offSetTime - offSetTimeBetweenNode));
             txtScore.text = pointData.totalPoint.ToString();
+            txtScore.transform.DOScale(1.4f, 0.3f).OnComplete(() => { txtScore.transform.DOScale(1f, 0f); });
+
             starBar.SetBarAndStar((float)pointData.totalPoint / (float)mapData.start3);
 
             lastNodeId = index;

@@ -99,25 +99,25 @@ MonoBehaviour:
     height: 700
     touchIndex: 12
   - id: 13
-    line: 02000000
+    line: 01000000
     type: 1
     time: 9.411458
     height: 700
     touchIndex: 13
   - id: 14
-    line: 02000000
+    line: 00000000
     type: 0
     time: 10.791667
     height: 700
     touchIndex: 14
   - id: 15
-    line: 02000000
+    line: 00000000
     type: 1
     time: 11.442708
     height: 700
     touchIndex: 15
   - id: 16
-    line: 02000000
+    line: 01000000
     type: 1
     time: 12.078125
     height: 700
@@ -135,31 +135,31 @@ MonoBehaviour:
     height: 700
     touchIndex: 18
   - id: 19
-    line: 02000000
+    line: 03000000
     type: 1
     time: 14.692708
     height: 700
     touchIndex: 19
   - id: 20
-    line: 02000000
+    line: 00000000
     type: 0
     time: 16.010416
     height: 700
     touchIndex: 20
   - id: 21
-    line: 02000000
+    line: 00000000
     type: 1
     time: 16.645834
     height: 700
     touchIndex: 21
   - id: 22
-    line: 02000000
+    line: 01000000
     type: 0
     time: 17.25
     height: 700
     touchIndex: 22
   - id: 23
-    line: 02000000
+    line: 01000000
     type: 0
     time: 17.9375
     height: 700
@@ -177,49 +177,49 @@ MonoBehaviour:
     height: 700
     touchIndex: 25
   - id: 26
-    line: 02000000
+    line: 03000000
     type: 0
     time: 19.994791
     height: 700
     touchIndex: 26
   - id: 27
-    line: 02000000
+    line: 03000000
     type: 0
     time: 21.395834
     height: 700
     touchIndex: 27
   - id: 28
-    line: 02000000
+    line: 03000000
     type: 1
     time: 22.052084
     height: 700
     touchIndex: 28
   - id: 29
-    line: 02000000
+    line: 01000000
     type: 0
     time: 22.770834
     height: 700
     touchIndex: 29
   - id: 30
-    line: 02000000
+    line: 01000000
     type: 1
     time: 23.442709
     height: 700
     touchIndex: 30
   - id: 31
-    line: 02000000
+    line: 00000000
     type: 0
     time: 24.177084
     height: 700
     touchIndex: 31
   - id: 32
-    line: 02000000
+    line: 00000000
     type: 1
     time: 24.859375
     height: 700
     touchIndex: 32
   - id: 33
-    line: 02000000
+    line: 01000000
     type: 1
     time: 25.526041
     height: 700
@@ -237,13 +237,13 @@ MonoBehaviour:
     height: 700
     touchIndex: 35
   - id: 36
-    line: 02000000
+    line: 03000000
     type: 0
     time: 28.239584
     height: 700
     touchIndex: 36
   - id: 37
-    line: 02000000
+    line: 03000000
     type: 1
     time: 28.942709
     height: 700
@@ -261,7 +261,7 @@ MonoBehaviour:
     height: 700
     touchIndex: 39
   - id: 40
-    line: 02000000
+    line: 01000000
     type: 1
     time: 31.088541
     height: 700
